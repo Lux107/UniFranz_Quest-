@@ -1,0 +1,55 @@
+body {
+    background: #171b2d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+#puzzle {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 5px;
+    margin: 30px auto;
+}
+
+.piece {
+    width: 120px;
+    height: 120px;
+    background: #30364f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+/* Camera is hidden at the beginning */
+
+#scanner {
+    display: none;
+    width: 300px;
+    margin: 20px auto;
+}
+
+#reader {
+    width: 300px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

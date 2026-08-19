@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Campus Puzzle</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<div class="game">
+
+		<h1>🧩 Campus Puzzle</h1>
+
+		<p>Find all the pieces!</p>
+
+		<!-- Puzzle -->
+		<div id="puzzle">
+
+			<div class="piece">?</div>
+			<div class="piece">?</div>
+			<div class="piece">?</div>
+
+			<div class="piece">?</div>
+			<div class="piece">?</div>
+			<div class="piece">?</div>
+
+		</div>
+
+		<p id="counter">0 / 6 pieces found</p>
+
+		<!-- QR Scanner -->
+		<div id="scanner">
+
+			<div id="reader"></div>
+
+		</div>
+
+		<p id="result"></p>
+
+		<button id="scanButton">📷 Scan QR Code</button>
+
+	</div>
+
+	<script src="https://unpkg.com/html5-qrcode"></script>
+	<script src="script.js"></script>
+
+</body>
+
+</html>
