@@ -15,26 +15,84 @@ body {
 
 h1 {
     font-size: 50px;
+    margin-bottom: 5px;
 }
+
+
+/* =========================
+   PUZZLE
+   ========================= */
 
 #puzzle {
     display: grid;
-    grid-template-columns: repeat(3, 120px);
-    gap: 5px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 195px);
+    gap: 3px;
     margin: 30px auto;
+    width: 606px;
 }
 
 .piece {
-    width: 120px;
-    height: 120px;
-    background: #30364f;
+    width: 200px;
+    height: 195px;
+    background-color: #30364f;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
+    overflow: hidden;
 }
 
-/* Camera is hidden at the beginning */
+
+/*=========================
+   IMAGE PIECES
+   ========================= */
+
+/* Hidden pieces */
+.piece {
+    background-image: none;
+}
+
+/* Revealed pieces */
+.revealed {
+    background-image: url("Puzzle.jpg");
+    background-size: 300% 200%;
+    background-repeat: no-repeat;
+}
+
+
+/* Top row */
+
+.piece1.revealed {
+    background-position: 0% 0%;
+}
+
+.piece2.revealed {
+    background-position: 50% 0%;
+}
+
+.piece3.revealed {
+    background-position: 100% 0%;
+}
+
+
+/* Bottom row */
+
+.piece4.revealed {
+    background-position: 0% 100%;
+}
+
+.piece5.revealed {
+    background-position: 50% 100%;
+}
+
+.piece6.revealed {
+    background-position: 100% 100%;
+}
+
+/* =========================
+   SCANNER
+   ========================= */
 
 #scanner {
     display: none;
@@ -45,6 +103,11 @@ h1 {
 #reader {
     width: 300px;
 }
+
+
+/* =========================
+   BUTTON
+   ========================= */
 
 button {
     padding: 15px 30px;
