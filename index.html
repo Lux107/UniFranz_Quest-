@@ -2,50 +2,104 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Campus Puzzle</title>
+
+
 	<link rel="stylesheet" href="style.css">
-</head>
+	<link rel="stylesheet" href="popup.css">
 
-<body>
 
-	<div class="game">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-		<h1>🧩 Campus Puzzle</h1>
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
-		<p>Find all 6 pieces!</p>
+	<body>
 
-		<!-- Puzzle -->
-		<div id="puzzle">
+		<!-- START SCREEN -->
+		<section id="startScreen" class="screen">
 
-			<div class="piece piece1">?</div>
-			<div class="piece piece2">?</div>
-			<div class="piece piece3">?</div>
+			<h1>Campus Puzzle</h1>
 
-			<div class="piece piece4">?</div>
-			<div class="piece piece5">?</div>
-			<div class="piece piece6">?</div>
+			<button id="startButton">
+				START
+			</button>
+
+		</section>
+
+
+		<!-- MAIN GAME -->
+		<section id="gameScreen" class="screen hidden">
+
+			<!-- Top left button -->
+			<button id="leftButton" class="topButton">
+				MENU
+			</button>
+
+
+			<!-- Top right button -->
+			<button id="rightButton" class="topButton">
+				?
+			</button>
+
+
+			<!-- Three rectangles -->
+			<div id="puzzleArea">
+
+				<div class="codeSlot" id="code1">
+					????????
+				</div>
+
+				<div class="codeSlot" id="code2">
+					????????
+				</div>
+
+				<div class="codeSlot" id="code3">
+					????????
+				</div>
+
+			</div>
+
+
+			<!--   QR button    -->
+			<button id="qrButton">
+				SCAN QR
+			</button>
+
+		</section>
+		<!--  POP UP         -->
+		<div id="popupOverlay" class="popupHidden">
+
+			<div id="popup">
+
+				<p id="popupText"></p>
+
+				<img id="popupImage" src="" alt="Popup image">
+
+				<div id="qrPopupContent">
+
+					<div id="qrReader"></div>
+
+				</div>
+				<button id="popupClose">X</button>
+
+			</div>
 
 		</div>
+		<!-- LIBRARY -->
+		<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 
-		<p id="counter">0 / 6 pieces found</p>
+		<!-- SCRIPTS -->
+		<script src="Scripts/popup.js"></script>
 
-		<!-- QR Scanner -->
-		<div id="scanner">
-			<div id="reader"></div>
-		</div>
+		<script src="Scripts/main.js"></script>
+		<script src="Scripts/menu.js"></script>
+		<script src="Scripts/game.js"></script>
+		<script src="Scripts/qr.js"></script>
 
-		<p id="result"></p>
 
-		<button id="scanButton">📷 Scan QR Code</button>
 
-	</div>
-
-	<!-- QR Code Library -->
-	<script src="https://unpkg.com/html5-qrcode"></script>
-
-	<!-- Our JavaScript -->
-	<script src="script.js"></script>
-
-</body>
+	</body>
 
 </html>
