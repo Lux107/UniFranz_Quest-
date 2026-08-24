@@ -8,12 +8,12 @@ const rightButton = document.getElementById("rightButton");
 
 leftButton.addEventListener("click", function () {
 
-    showImagePopup("images/map.jpg");
+    showImagePopup("Images/map.jpg");
 
 });
 
 rightButton.addEventListener("click", function () {
 
-    showImagePopup("images/rules.jpg");
+    showImagePopup("Images/rules.jpg");
 
 });
