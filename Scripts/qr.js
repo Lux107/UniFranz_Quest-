@@ -162,6 +162,8 @@ function checkCode(code) {
 
     if (foundCodes.length === 3) {
 
+        document.body.classList.add("completed");
+
         showTextPopup(
             "🎉 ¡FELICIDADES!\n\n" +
             "¡Encontraste los 3 códigos!\n\n" +
@@ -169,8 +171,6 @@ function checkCode(code) {
         );
 
     }
-
-}
 
 
 

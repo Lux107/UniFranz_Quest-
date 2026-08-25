@@ -16,6 +16,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+    body.completed {
+        background: linear-gradient( 135deg, #ffb45c 0%, #ff9d26 45%, #ff8c00 100% );
+    }
+
 /* ========================================
    SCREENS
 ======================================== */
