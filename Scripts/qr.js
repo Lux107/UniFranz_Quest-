@@ -171,8 +171,7 @@ function checkCode(code) {
         );
 
     }
-
-
+}
 
 // ==========================================
 // REVEAL CODE
@@ -231,7 +230,6 @@ function stopQRScanner() {
 // SCAN FAILURE
 // ==========================================
 
-function onQRScanFailure(error) {
-
-    // Scanner is simply still looking.
-}No se pudo abrir la cámara.
+    function onQRScanFailure(error) {
+        // Scanner is simply still looking.
+    }
