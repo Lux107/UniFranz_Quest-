@@ -24,9 +24,11 @@
     display: none !important;
 }
 
+
 /* ========================================
    MOBILE POPUP
 ======================================== */
+
 @media (max-width: 900px) {
 
     #popup {
@@ -38,9 +40,10 @@
     #popupText {
         font-size: 140px !important;
         line-height: 1.5 !important;
-
     }
 }
+
+
 /* ========================================
    POPUP
 ======================================== */
@@ -50,11 +53,13 @@
     width: 70%;
     max-width: 600px;
     min-height: 180px;
-    background: #ffffff;
-    border: 5px solid #000000;
+    background: #f2f2f2;
+    /* ORANGE OUTLINE */
+    border: 5px solid #ff8c00;
     border-radius: 15px;
     padding: 40px;
     box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.25);
 }
 
 
@@ -65,16 +70,19 @@
 #popupText {
     margin: 0;
     padding-right: 50px;
-    color: black !important;
+    /* SAME DARK GRAY AS YOUR OTHER TEXT */
+    color: #4a4a4a !important;
     font-family: "Silkscreen", monospace;
     line-height: 1.5;
     white-space: pre-line;
     font-size: 10px !important;
 }
 
+
 /* ========================================
-    POP UP IMAGE 
+   POP UP IMAGE
 ======================================== */
+
 #popupImage {
     max-width: 100%;
     max-height: 70vh;
@@ -82,7 +90,9 @@
     margin: 0 auto;
     object-fit: contain;
 }
-    /* ========================================
+
+
+/* ========================================
    QR POPUP
 ======================================== */
 
@@ -92,12 +102,12 @@
     margin-top: 20px;
 }
 
-
-
 #qrReader {
     width: 100%;
 }
-    /* ========================================
+
+
+/* ========================================
    CLOSE BUTTON
 ======================================== */
 
@@ -107,9 +117,10 @@
     right: 10px;
     width: 45px;
     height: 45px;
-    background: #e53935;
+    /* ORANGE */
+    background: #ff8c00;
     color: white;
-    border: 3px solid #000000;
+    border: 3px solid #d96f00;
     border-radius: 8px;
     font-family: monospace;
     font-size: 20px;
@@ -118,4 +129,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
+
+
+    /* ========================================
+   CLOSE BUTTON HOVER
+======================================== */
+
+    #popupClose:hover {
+        background: #ff9d26;
+        border-color: #ff8c00;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+    }

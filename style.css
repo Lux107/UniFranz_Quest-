@@ -1,4 +1,3 @@
-
 /* ========================================
    GENERAL
 ======================================== */
@@ -12,11 +11,10 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: #171b2d;
-    color: white;
+    background: linear-gradient( 135deg, #f2f2f2 0%, #f2f2f2 42%, #fff4e6 58%, #ffd09a 100% );
+    color: #171b2d;
     font-family: Arial, sans-serif;
 }
-
 
 /* ========================================
    SCREENS
@@ -38,17 +36,20 @@ body {
 ======================================== */
 
 #startScreen {
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    /*background-image: url("images/start.png");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 35px;
 }
 
-    #startScreen h1 {
-        font-size: 50px;
-        font-family: "Silkscreen", monospace;
-    }
+   
 
 
 /* ========================================
@@ -58,11 +59,26 @@ body {
 #startButton {
     padding: 20px 70px;
     font-size: 25px;
-    border-radius: 20px;
+    border-radius: 18px;
     font-family: "Silkscreen", monospace;
-    border: none;
+    background: #ff8c00;
+    color: white;
+    border: 2px solid #ff8c00;
     cursor: pointer;
+    box-shadow: 0 5px 0 #b85f00, 0 0 20px rgba(255, 140, 0, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
+
+    #startButton:hover {
+        background: #ff9d26;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 0 #b85f00, 0 0 30px rgba(255, 140, 0, 0.45);
+    }
+
+    #startButton:active {
+        transform: translateY(3px);
+        box-shadow: 0 2px 0 #b85f00, 0 0 15px rgba(255, 140, 0, 0.25);
+    }
 
 
 /* ========================================
@@ -71,25 +87,33 @@ body {
 
 .topButton {
     position: absolute;
-    top: 20px;
+    top: 60px;
     width: 70px;
     height: 50px;
     font-family: "Silkscreen", monospace;
+    font-size: 14px;
     border-radius: 15px;
-    border: 2px solid white;
-    background: transparent;
-    color: white;
+    border: 2px solid #b8b8b8;
+    background: #d6d6d6;
+    color: #4a4a4a;
     cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.topButton:hover {
+    background: #ff8c00;
+    border-color: #ff8c00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(255, 140, 0, 0.35);
 }
 
 #leftButton {
     left: 20px;
-    top: 60px;
 }
 
 #rightButton {
     right: 20px;
-    top: 60px;
 }
 
 
@@ -118,18 +142,26 @@ body {
 .codeSlot {
     width: 100%;
     height: 70px;
-    border: 4px solid orange;
+    border: 3px solid #ff8c00;
     border-radius: 35px;
-    background: transparent;
+    background: #d6d6d6;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-family: monospace;
+    color: #4a4a4a;
+    font-family: "Silkscreen", monospace;
     font-size: 28px;
     letter-spacing: 5px;
     box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.12), inset 0 0 15px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
+
+    .codeSlot:hover {
+        border-color: #ff9d26;
+        background: #cfcfcf;
+        box-shadow: 0 0 20px rgba(255, 140, 0, 0.25), inset 0 0 15px rgba(0, 0, 0, 0.05);
+    }
 
 /* ========================================
    QR BUTTON
@@ -137,13 +169,28 @@ body {
 
 #qrButton {
     position: absolute;
-    bottom: 40px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     padding: 18px 50px;
-    border-radius: 20px;
-    border: none;
+    border-radius: 18px;
+    border: 2px solid #ff8c00;
+    background: #ff8c00;
+    color: white;
     font-family: "Silkscreen", monospace;
     font-size: 22px;
     cursor: pointer;
+    box-shadow: 0 5px 0 #b85f00, 0 0 20px rgba(255, 140, 0, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
+
+    #qrButton:hover {
+        background: #ff9d26;
+        transform: translateX(-50%) translateY(-3px);
+        box-shadow: 0 8px 0 #b85f00, 0 0 30px rgba(255, 140, 0, 0.45);
+    }
+
+    #qrButton:active {
+        transform: translateX(-50%) translateY(3px);
+        box-shadow: 0 2px 0 #b85f00, 0 0 15px rgba(255, 140, 0, 0.25);
+    }

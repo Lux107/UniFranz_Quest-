@@ -13,9 +13,9 @@ let qrScanning = false;
 // ==========================================
 
 const puzzleCodes = [
-    "123456",
-    "676767",
-    "107107"
+    "A7K9M2QX",
+    "X7R2K8QM",
+    "W2P9L6XC"
 ];
 
 // ==========================================
@@ -61,14 +61,24 @@ qrButton.addEventListener("click", function () {
 
     }).catch(function (error) {
 
+        console.error("Camera error:", error);
+
+        // Reset scanner
+        qrScanner = null;
+        qrScanning = false;
+
+        // Close QR popup
         closePopup();
 
-        showTextPopup(
-            "No se pudo abrir la cámara.\n\n" +
-            "Por favor, revisa los permisos de la cámara."
-        );
+        // Small delay so the first popup fully closes
+        setTimeout(function () {
 
+            showTextPopup(
+                "No se pudo abrir la cámara.\n\n" +
+                "Por favor, revisa los permisos de la cámara."
+            );
 
+        }, 100);
 
     });
 
@@ -140,12 +150,11 @@ function checkCode(code) {
 
     showTextPopup(
         "🎉 ¡Muy bien!\n\n" +
-        "Encontraste el código " +
-        (codeIndex + 1) +
-        "/3.\n\n" +
+        "Has desbloqueado " +
+        foundCodes.length +
+        "/3 códigos.\n\n" +
         "¡Sigue buscando!"
     );
-
 
     // ======================================
     // ALL CODES FOUND
@@ -197,6 +206,7 @@ function stopQRScanner() {
     qrScanner.stop().then(function () {
 
         qrScanner.clear();
+        closePopup();
 
         qrScanner = null;
 
@@ -224,4 +234,4 @@ function stopQRScanner() {
 function onQRScanFailure(error) {
 
     // Scanner is simply still looking.
-}
+}No se pudo abrir la cámara.
